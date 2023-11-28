@@ -1,0 +1,34 @@
+:root{
+    --padding-inline : 1rem;
+    --padding-block : 0.8rem;
+}
+.event-options-list {
+    background-color: var(--item-bg-color);
+    padding-inline: var(--padding-inline);
+    /* padding-block: var(--padding-block); */
+    border-radius: var(--radius);
+}
+.event-options-list > li{
+    color: var(--heading-font-color);
+    border-bottom: 2px solid var(--item-bg-color-dark);
+    padding-block: var(--padding-block);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.event-options-list > li p{
+    margin-right: auto;
+}
+.event-options-list .value .value-label{
+   color: var(--text-font-color-light);
+}
+/* .event-options-list > li .value{
+    cursor: pointer;
+} */
+
+.event-options-list > li:last-child{
+    border: none;
+}

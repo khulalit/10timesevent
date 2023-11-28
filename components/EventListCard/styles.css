@@ -1,0 +1,26 @@
+.card{
+    min-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: var(--heading-font-color);
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #FDFDFD;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 10px;
+}
+.card-location{
+    display: flex;
+}
+
+.card-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-col.image{
+    width: 100px;
+    height: 100px;
+}

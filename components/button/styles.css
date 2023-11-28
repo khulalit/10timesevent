@@ -1,0 +1,16 @@
+:root{
+    --radius : 8px;
+    --padding : 0.5rem 1rem;
+    --bg-color : #333537;
+    --color : #fff;
+}
+
+.btn{
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding: var(--padding);
+    border-radius: var(--radius);
+}
+.btn:hover{
+    background-color: #2e3031;
+}

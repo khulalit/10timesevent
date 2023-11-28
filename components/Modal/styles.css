@@ -1,0 +1,22 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.modal input[type=text],
+select {
+    width: 100%;
+    padding: 0.3rem 0.4rem;
+    margin: 18px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

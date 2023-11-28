@@ -1,0 +1,24 @@
+.event-list{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+.event-timeline{
+    border-right: 2px dashed var(--item-bg-color-dark);
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--heading-font-color);
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    top: 0;
+}
+
+@media (max-width: 760px) {
+    .event-list{
+        grid-template-columns: 1fr;
+    }
+}

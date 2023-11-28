@@ -1,0 +1,27 @@
+.themebanner{
+    border-radius: 1rem;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    font-size: 14px;
+    padding: 6px;
+    font-weight: 600;
+}
+.themebanner > div {
+    display: grid;
+    /* place-content : center; */
+    background-color: white;
+    border-radius: 9px;
+    padding: 4px;
+}
+.line {
+    background-color: var(--item-bg-color-dark);
+    border-radius: 2px;
+    height: 10px;
+    margin-bottom: 5px;
+}
+.line-half{
+    width: 60%;
+}
+
+.line-full{
+    width: 100%;
+}

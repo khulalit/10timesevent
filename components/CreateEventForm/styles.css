@@ -1,0 +1,13 @@
+.main-form-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 845px) {
+
+    .main-form-content {
+        grid-template-columns: 1fr;
+    }
+
+}
