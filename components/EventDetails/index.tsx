@@ -7,12 +7,12 @@ import { GrLocation } from "react-icons/gr";
 import DateBanner from '../DateBanner';
 import { useState } from 'react';
 import Modal from '../Modal';
+import TimeZones from '@/assets/timezones.json';
 
 export default function EventDetails({formValues, setFormValues}: {formValues: any, setFormValues: Function}) {
 
-    const [date, setDate] = useState({});
-    const [session, setSession] = useState();
     const [openModal, setOpenModal] = useState(false);
+    const [timeZoneSearchQuery, setTimeZoneSearchQuery] = useState('');
 
     return (
         <div className='event-det my-2'>
@@ -33,6 +33,7 @@ export default function EventDetails({formValues, setFormValues}: {formValues: a
                         </label>
                         <div>
                             <input type='text'
+                                placeholder="3:30 PM"
                                 onChange={(e)=>{
                                     setFormValues({
                                         ...formValues,
@@ -56,6 +57,7 @@ export default function EventDetails({formValues, setFormValues}: {formValues: a
                         </label>
                         <div>
                             <input type='text'
+                                placeholder="3:30 PM"
                                 onChange={(e)=>{
                                     setFormValues({
                                         ...formValues,
@@ -65,10 +67,22 @@ export default function EventDetails({formValues, setFormValues}: {formValues: a
                                 className='outline-none date-label item w-fit' />
                         </div>
                     </div>
-                    <div className='location-details'>
-                        <label htmlFor='timezone'>
-                            <LuGlobe /> GMT+05:30 Calcutta
+                    <div className='location-details relative'>
+                        <label htmlFor='timezone' className='' onClick={()=>{setOpenModal(true)}}>
+                            <LuGlobe /> {formValues['timeZone']?.substring(0,20) || "GMT+05:30 Calcutta"}
                         </label>
+                        {openModal && <div className='absolute top-8 z-50 w-fit p-4 shadow-lg max-h-[300px] overflow-auto bg-white \-red-600'>
+                            <input type='text' placeholder='Search Timezone....' className='mb-4' onChange={(e)=>{setTimeZoneSearchQuery(e.target.value)}}/>
+                            {TimeZones.filter((timezone:any)=>timezone.text.includes(timeZoneSearchQuery)).map((timezone: any)=><li className='list-none cursor-pointer' onClick={()=>{
+                                setFormValues({
+                                    ...formValues,
+                                    timeZone : timezone.text
+                                })
+                                setOpenModal(false);
+                            }}>
+                                    {timezone.text}
+                                </li>)}
+                        </div>}
                         {/* <input id='timezone' type='text' /> */}
 
                     </div>
