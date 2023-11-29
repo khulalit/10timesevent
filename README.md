@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Instruction
+This project is made with Next js (with app router).
+To Run this clone the repo. run ```npm install``` then ```npm run dev``` to run dev server;
+
+There are two routes in the app / for event create form and /event-lists for listing.
+
 ## Note : 
 This project is made using Next.js,
 I havent use any UI libraries because of light application demand.
