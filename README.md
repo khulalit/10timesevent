@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 This project is made with Next js (with app router).
 To Run this clone the repo. run ```npm install``` then ```npm run dev``` to run dev server;
 
+## Live Link [https://10timesevent.vercel.app/](Open)
+
 There are two routes in the app / for event create form and /event-lists for listing.
 
 ## Note : 
