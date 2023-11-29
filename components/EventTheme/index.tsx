@@ -21,7 +21,7 @@ export default function EventTheme({formValues}: {formValues : any}) {
 
     return (
         <div className="event-theme">
-            <div className="image w-full min-h-[300px] relative mt-2 rounded-md" style={{background: formValues['theme-bg'] || '#4f4f4f'}}>
+            <div className="image w-full min-h-[300px] relative mt-2 rounded-md" style={{background: formValues['themeBg']}}>
                     <textarea className='absolute font-extrabold bottom-0 overflow-hidden w-1/2 h-1/2 text-center text-4xl left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] outline-none italic bg-transparent' style={{color: formValues['Color']}}/>
                     {image && <img src={image} alt='image' className='absolute w-full h-full top-0 left-0 object-fit' />}
                 <div className='absolute bottom-0 right-0'>

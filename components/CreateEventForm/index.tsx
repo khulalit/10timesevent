@@ -13,7 +13,9 @@ import Loading from '../Loading';
 
 export default function CreateEventForm() {
 
-    const [formValues, setFormValues] = useState({});
+    const [formValues, setFormValues] = useState<any>({
+        themeBg: EVENT_THEME_COLOR_OPTIONS[0].bg
+    });
     const [selectIndex, setSelectIndex] = useState(0);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
